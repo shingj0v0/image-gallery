@@ -46,7 +46,7 @@ app.post("/api/upload", upload.single("image"), async (req, res) => {
 
 app.get("/api/images", async (req, res) => {
   try {
-    const images = (await Image.find()).toSorted({ createdAt: -1 }).lean();
+    const images = await Image.find().sort({ createdAt: -1 }).lean();
     res.json(images);
   } catch (err) {
     console.error(err);
