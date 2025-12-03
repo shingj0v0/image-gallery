@@ -1,0 +1,47 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>Image Gallery</h1>
+        <p>이미지를 업로하고 공유하세요</p>
+      </header>
+
+      <section class="upload-section">
+        <div class="upload-container">
+          <input type="file" id="fileInput" accept="image/*" multiple hidden />
+          <button id="uploadBtn" class="upload-btn">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="17 8 12 3 7 8"></polyline>
+              <line x1="12" y1="3" x2="12" y2="15"></line>
+            </svg>
+            이미지 선택
+          </button>
+          <div id="uploadStatus" class="upload-status"></div>
+        </div>
+      </section>
+
+      <section class="gallery-section">
+        <div id="gallery" class="gallery"></div>
+        <div id="loading" class="loading" style="display: none">이미지 로딩중...</div>
+        <div id="emptyState" class="empty-state" style="display: none">
+          <p>아직 업로드된 이미지가 없습니다. 첫 이미지를 지금 바로 올려주세요!</p>
+        </div>
+      </section>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

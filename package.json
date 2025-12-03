@@ -1,0 +1,28 @@
+{
+  "name": "image-gallery",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node -r dotenv/config src/index.js",
+    "dev": "node --watch -r dotenv/config src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@vercel/blob": "^2.0.0",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "mongoose": "^9.0.0",
+    "multer": "^2.0.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^16.5.0",
+    "prettier": "^3.7.3"
+  }
+}
